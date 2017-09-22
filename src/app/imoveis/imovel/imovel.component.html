@@ -1,0 +1,12 @@
+<div class="imovel--image">
+  <!-- Adicionar um slider para apresentar as demais fotos -->
+  <img [src]="imovel.images[0].url">
+  <p class="imovel--image-desc">{{imovel.images[0].desc}}</p>
+  <p class="imovel--value">R${{imovel.value}}</p>
+</div>
+<div class="imovel--infos">
+  <h1>{{imovel.name}}</h1>
+  <p class="imovel--infos-type">{{imovel.type}}</p>
+  <p class="imovel--infos-address" *ngFor="let address of imovel.place">{{address.address}}</p>
+  <p class="imovel--infos-desc">{{imovel.description}}</p>
+</div>
